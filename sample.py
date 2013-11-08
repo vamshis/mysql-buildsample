@@ -20,7 +20,7 @@ cursor.execute(sql1)
 
 #inserting VALUES
 sql2 = """INSERT INTO EMPLOYEE(NAME,
-         AGE, SEX, INCOME)
+         AGE, INCOME)
          VALUES ('Manoh', 20, 5000)"""
 try:
    cursor.execute(sql2)
