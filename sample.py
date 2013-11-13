@@ -4,13 +4,9 @@ import MySQLdb
 db = MySQLdb.connect("127.0.0.1","shippable")
 cursor = db.cursor()
 
-cursor.execute("DROP DATABASE IF EXISTS TESTDB")
-
 cursor.execute("CREATE DATABASE TESTDB")
 
 cursor.execute("USE TESTDB")
-
-#cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
 
 #creating TABLE
 sql1 = """CREATE TABLE EMPLOYEE (
@@ -44,6 +40,8 @@ try:
              (name, age, income )
 except:
    print "Error: unable to fecth data"
+
+cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
    
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
    
